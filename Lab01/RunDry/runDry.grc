@@ -28,21 +28,30 @@ options:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [10, 10]
+    coordinate: [32, 12.0]
     rotation: 0
     state: enabled
 
 blocks:
 - name: freq
-  id: variable
+  id: variable_qtgui_range
   parameters:
     comment: ''
-    value: 32e6
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: 100e6
+    step: 20e6
+    stop: 6e9
+    value: 2.4e9
+    widget: eng_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 96.0]
+    coordinate: [24, 296.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -54,28 +63,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [10, 170]
-    rotation: 0
-    state: enabled
-- name: variable_qtgui_range_0
-  id: variable_qtgui_range
-  parameters:
-    comment: ''
-    gui_hint: ''
-    label: ''
-    min_len: '200'
-    orient: QtCore.Qt.Horizontal
-    rangeType: float
-    start: 300e6
-    step: '100'
-    stop: 400e6
-    value: 300e6
-    widget: counter_slider
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [24, 296.0]
+    coordinate: [32, 172.0]
     rotation: 0
     state: enabled
 - name: blocks_complex_to_mag_0
@@ -91,7 +79,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [424, 279]
+    coordinate: [632, 304.0]
     rotation: 0
     state: enabled
 - name: osmosdr_source_0
@@ -448,7 +436,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 92]
+    coordinate: [328, 104.0]
     rotation: 0
     state: enabled
 - name: qtgui_freq_sink_x_0
@@ -482,7 +470,7 @@ blocks:
     color9: '"dark green"'
     comment: ''
     ctrlpanel: 'False'
-    fc: '0'
+    fc: freq
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
@@ -529,7 +517,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [624, 112.0]
+    coordinate: [768, 132.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
@@ -626,7 +614,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [624, 248.0]
+    coordinate: [832, 268.0]
     rotation: 0
     state: enabled
 
